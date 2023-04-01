@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Nova+Mono&display=swap");
+
+body {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  word-wrap: break-word !important;
+  overflow: auto;
+  background: url("../../src/img/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Lato", sans-serif;
+  color: white;
+}
+
+h1,
+h2 {
+  font-family: "Nova Mono", monospace;
+}
+
+hr {
+  border: 1px dashed rgba(255, 255, 255, 0.25);
+}
+.profileCard {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  position: relative;
+  padding: 50px;
+  margin: 75px 35% 75px 35%;
+  transition: 0.5s;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.profileImage {
+  height: 200px;
+  margin: auto;
+  display: block;
+  border-radius: 100px;
+  box-shadow: cyan 5px 5px 0, red -5px -5px 0, blue 0px 0px 0, orange -0px -0px 0;
+  border: solid black 2px;
+  transition: 0.5s;
+}
+
+.profileImage:hover {
+  transition: 0.5s;
+  box-shadow: cyan 0px 0px 0, red -0px -0px 0, blue -5px 5px 0, orange 4px -5px 0;
+
+}
+
+.profileName {
+  text-align: center;
+}
+
+.bio {
+  text-align: center;
+}
+
+.linkButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 50px;
+  margin: 25px 50px 25px 50px;
+  border-radius: 50px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  transition: 0.5s;
+  box-shadow: cyan 4px 4px 0, red -4px -4px 0, blue 0px 0px 0, orange -0px -0px 0;
+  border: solid black 2px;
+
+}
+
+.linkButtons i {
+  position: absolute;
+  left: 30%;
+}
+
+.linkButtons:hover {
+  border: solid gray 2px;
+  box-shadow: cyan 0px 0px 0, red -0px -0px 0, blue -4px 4px 0, orange 4px -4px 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 1250px) {
+  .profileCard {
+    padding: 25px;
+    margin: 75px 15% 75px 15%;
+    transition: 0.5s;
+  }
+}
+
+footer {
+  padding: 50px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
