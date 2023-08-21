@@ -1,0 +1,170 @@
+/* styles.css */
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set background color */
+body {
+    background-color: #000;
+    color: #0f0;
+    font-family: monospace;
+}
+
+/* Style banner */
+.banner {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+/* Style navigation bar */
+.navbar,
+.footer {
+    outline: 2px solid #0f0;
+    background-color: #000;
+    width: 90%;
+    padding: 1rem;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+.menu {
+    list-style: none;
+    /* Remove list-style bullets */
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu li {
+    margin: 0 1rem;
+}
+
+.menu a,
+.footer a {
+    text-decoration: none;
+    color: #0f0;
+    margin: 0.2rem 0;
+    padding: 0.5rem;
+    transition: color 0.3s, transform 0.3s, animation 0.3s;
+    transition: 250ms;
+    border-radius: 5px;
+    /* Round off the corners */
+}
+
+.menu a:hover {
+    color: #fff;
+    transition: 250ms;
+}
+
+/* Style dropdown menu */
+.dropdown {
+    transition: 250ms;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000;
+    border: 2px solid #0f0;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+    list-style: square;
+    margin-left: 1rem;
+    opacity: 0;
+    border-radius: 5px;
+    /* Round off the corners */
+}
+
+/* Fade-in and slide down animation for dropdown */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInSlideDown 0.3s;
+    transition: 250ms;
+}
+
+@keyframes fadeInSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dropdown-content a {
+    text-decoration: none;
+    color: #0f0;
+    display: block;
+    transition: color 0.3s, opacity 0.3s, transform 0.3s;
+    opacity: 1;
+    transform: translateY(0);
+    margin: 0.2rem 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #0f0;
+    transition: 250ms;
+
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.dropdown-content a:hover {
+    color: #fff;
+    transition: 250ms;
+
+}
+
+/* Add this to your existing CSS */
+.coming-soon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 1.5rem;
+    color: #0f0;
+}
+
+.coming-soon h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Style footer */
+.footer {
+    background-color: #000;
+    color: #0f0;
+    text-align: center;
+    padding: 1rem;
+    width: 90%;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px 5px 0px 0px;
+    /* Round off the corners */
+
+}
+
+.footer-top {
+    margin-bottom: 1rem;
+}
